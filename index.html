@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visa Travels - Travel with intention. Discover curated retreats, active adventures, and boutique stays all in one place. Not your boring travel agent.">
+    <title>Visa Travels | Go Places with Intention</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo" id="logo-link">
+                <!-- Compass SVG Icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+                <span>Visa Travels</span>
+            </a>
+            
+            <!-- Quick Search Bar in Nav -->
+            <div class="nav-search" id="nav-search-container">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="nav-search-input" placeholder="Search destination...">
+            </div>
+
+            <!-- Hamburger Icon for Mobile -->
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#" class="quiz-trigger" id="nav-link-quiz">Quiz</a></li>
+                    <li><a href="#pick-the-place" id="nav-link-retreats">Retreats</a></li>
+                    <li><a href="#pick-the-place" id="nav-link-packages">Packages</a></li>
+                    <li><a href="#" class="booking-trigger" id="nav-link-coaches">Book Seat</a></li>
+                    <li><a href="#our-values" id="nav-link-resources">Our Values</a></li>
+                    <li><a href="#footer" id="nav-link-contact">Contact us</a></li>
+                    <li><a href="#footer" id="nav-link-about">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" id="hero-main-title">Travel</h1>
+                <p class="hero-subtitle" id="hero-sub-title">Travel with intention. Discover retreats, active adventures, and boutique stays all in one place.</p>
+                
+                <!-- Hero Search Widget -->
+                <div class="hero-search-widget" id="hero-search-widget">
+                    <div class="search-field" id="field-activity">
+                        <label for="hero-select-activity">Activity/Goal</label>
+                        <select id="hero-select-activity">
+                            <option value="any">Yoga / Surf / Cycling</option>
+                            <option value="Yoga">Yoga & Meditation</option>
+                            <option value="Surf">Surf & Coastal Adventure</option>
+                            <option value="Cycling">Cycling & Trekking</option>
+                            <option value="Culture">Cultural Discovery</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search-field" id="field-location">
+                        <label for="hero-select-location">Location</label>
+                        <select id="hero-select-location">
+                            <option value="any">Kazakhstan / Bali / Sumatra</option>
+                            <option value="Bali">Bali, Indonesia</option>
+                            <option value="Sumatra">Sumatra, Indonesia</option>
+                            <option value="Sumba">Sumba, Indonesia</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                        </select>
+                    </div>
+
+                    <div class="search-field" id="field-duration">
+                        <label for="hero-select-duration">Date/Duration</label>
+                        <select id="hero-select-duration">
+                            <option value="any">Anytime / 5 days</option>
+                            <option value="short">1 - 3 Days</option>
+                            <option value="mid">4 - 7 Days</option>
+                            <option value="long">8+ Days</option>
+                        </select>
+                    </div>
+
+                    <div class="search-field" id="field-budget">
+                        <label for="hero-select-budget">Budget</label>
+                        <select id="hero-select-budget">
+                            <option value="any">$0 - $1000</option>
+                            <option value="low">Under $500</option>
+                            <option value="mid">$500 - $800</option>
+                            <option value="high">$800+</option>
+                        </select>
+                    </div>
+
+                    <button class="hero-explore-btn" id="hero-explore-btn">
+                        <span>Explore</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof & Brand Banner -->
+        <section class="social-proof-section" id="social-proof-section">
+            <div class="social-proof-container">
+                <div class="badge-row">
+                    <span class="proof-badge blue" id="badge-melali">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        We are Melali
+                    </span>
+                    <span class="proof-badge gold" id="badge-satisfied">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        5K+ People Satisfied
+                    </span>
+                    
+                    <div class="avatar-group" id="avatar-group-container">
+                        <img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User 1">
+                        <img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="User 2">
+                        <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="User 3">
+                        <div class="avatar-more">+5</div>
+                    </div>
+                </div>
+
+                <div class="headline-container">
+                    <h2 class="main-tagline" id="main-tagline">
+                        Visa Travels means <span class="highlight-underline">Going Places</span>
+                    </h2>
+                    
+                    <div class="timeline-widget" id="timeline-widget">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-node start" data-target="hero-section"></div>
+                        <div class="timeline-node mid-1" data-target="our-values"></div>
+                        <div class="timeline-node mid-2" data-target="pick-the-place"></div>
+                        <div class="timeline-node end" data-target="footer"></div>
+                        <div class="timeline-tracker">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Value Section -->
+        <section class="values-section" id="our-values">
+            <div class="values-container">
+                <div class="values-left-col">
+                    <span class="value-number-badge" id="value-number-badge">• 01. Our Value</span>
+                    <h2 class="value-title" id="value-title">Not Your Boring Travel Agent</h2>
+                    <p class="value-text" id="value-text">We plan chill, curated trips with good vibes and better people. Connect with local communities, explore hidden nature, and stay in places with character.</p>
+                    <button class="book-seat-btn booking-trigger" id="value-book-btn">Book a Seat</button>
+                </div>
+                
+                <div class="values-right-col">
+                    <!-- Cards Carousel -->
+                    <div class="carousel-container" id="values-carousel-container">
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- Card 1 -->
+                            <div class="carousel-card large-card" style="background-image: url('images/bangli.png')">
+                                <div class="card-overlay"></div>
+                                <div class="card-content">
+                                    <h3>Bangli, East Bali</h3>
+                                    <p>Cultural walk with local guides</p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="carousel-card medium-card" style="background-image: url('images/uluwatu.png')">
+                                <div class="card-overlay"></div>
+                                <div class="card-content">
+                                    <h3>Uluwatu</h3>
+                                    <p>Coastal cliff retreats</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="carousel-card small-card" style="background-image: url('images/hero.png')">
+                                <div class="card-overlay"></div>
+                                <div class="card-content">
+                                    <h3>Yurt Adventure</h3>
+                                    <p>Cozy mountain escapes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Navigation -->
+                    <div class="carousel-nav" id="carousel-nav-buttons">
+                        <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Previous slide">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                            <span>Prev</span>
+                        </button>
+                        <button class="carousel-btn next-btn" id="carousel-next" aria-label="Next slide">
+                            <span>Next</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Pick the Place" Grid & Dynamic Filters -->
+        <section class="places-section" id="pick-the-place">
+            <div class="places-container">
+                <div class="places-header">
+                    <div class="places-header-left">
+                        <span class="places-tag">• Popular Destination 2026</span>
+                        <h2 class="places-title" id="places-main-title">Pick the Place</h2>
+                    </div>
+                    <div class="places-header-right">
+                        <p>We have great options for everyone and cozy spots for your squad to enjoy together!</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Grid Filter Bar -->
+                <div class="grid-filter-bar" id="grid-filter-bar">
+                    <div class="filter-group" id="filter-group-dest">
+                        <label for="filter-destination">Destination</label>
+                        <input type="text" id="filter-destination" placeholder="Find a spot...">
+                    </div>
+                    
+                    <div class="filter-group" id="filter-group-cat">
+                        <label for="filter-category">Category</label>
+                        <select id="filter-category">
+                            <option value="all">Select type</option>
+                            <option value="retreat">Retreats</option>
+                            <option value="adventure">Adventures</option>
+                            <option value="stay">Stays</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group" id="filter-group-price">
+                        <label for="filter-price">Price</label>
+                        <select id="filter-price">
+                            <option value="all">Select range budget</option>
+                            <option value="500">Under $500</option>
+                            <option value="550">$500 - $600</option>
+                            <option value="high">$600+</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group" id="filter-group-date">
+                        <label for="filter-date">Date</label>
+                        <select id="filter-date">
+                            <option value="all">Select date range</option>
+                            <option value="august">12-14 August</option>
+                            <option value="anytime">Request based</option>
+                        </select>
+                    </div>
+
+                    <button class="filter-discover-btn" id="filter-discover-btn">
+                        <span>Discover</span>
+                    </button>
+                </div>
+
+                <!-- Dynamic Grid Container -->
+                <div class="destinations-grid" id="destinations-grid">
+                    <!-- Rendered dynamically by script.js -->
+                </div>
+                
+                <!-- Empty State -->
+                <div class="empty-grid-state" id="empty-grid-state" style="display: none;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                    <h3>No Destinations Match Your Filter</h3>
+                    <p>Try resetting the filters or modifying your choices to see open spots.</p>
+                    <button class="reset-filter-btn" id="reset-filter-btn">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section" id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                    </svg>
+                    <span>Visa Travels</span>
+                </a>
+                <p class="footer-tagline">Connecting intentional travelers with authentic local stays, restorative retreats, and meaningful global experiences.</p>
+                <div class="social-links" id="footer-social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4.000 4.000 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Discover</h3>
+                <ul>
+                    <li><a href="#pick-the-place">Retreats</a></li>
+                    <li><a href="#pick-the-place">Tours & Activities</a></li>
+                    <li><a href="#pick-the-place">Private Bookings</a></li>
+                    <li><a href="#" class="quiz-trigger">Find your vibe quiz</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#our-values">Our Story</a></li>
+                    <li><a href="#our-values">Our Values</a></li>
+                    <li><a href="#">Guides & Resources</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Stay Connected</h3>
+                <p>Subscribe to receive curated trip releases, private spots, and local guide advice.</p>
+                <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Keep an eye on your inbox.'); this.reset();">
+                    <input type="email" placeholder="Your email address" required aria-label="Email address">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Visa Travels. Designed with intention. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Travel Quiz Modal -->
+    <dialog class="quiz-dialog" id="quiz-dialog">
+        <div class="dialog-header">
+            <h2>Find Your Travel Vibe</h2>
+            <button class="dialog-close-btn" id="quiz-close-btn" aria-label="Close dialog">&times;</button>
+        </div>
+        
+        <div class="quiz-content" id="quiz-content">
+            <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 25%;"></div>
+            </div>
+
+            <!-- Quiz Step 1 -->
+            <div class="quiz-step active" data-step="1">
+                <p class="quiz-question">1. What is your ideal type of travel?</p>
+                <div class="quiz-options">
+                    <button class="quiz-option" data-answer="adventure">
+                        <span class="option-icon">🏔️</span>
+                        <span class="option-title">Active Adventure</span>
+                        <span class="option-desc">Trekking, cycling, and exploring pristine wilderness.</span>
+                    </button>
+                    <button class="quiz-option" data-answer="retreat">
+                        <span class="option-icon">🧘</span>
+                        <span class="option-title">Wellness Retreat</span>
+                        <span class="option-desc">Yoga, meditation, relaxation, and self-care.</span>
+                    </button>
+                    <button class="quiz-option" data-answer="stay">
+                        <span class="option-icon">🏡</span>
+                        <span class="option-title">Boutique Stay</span>
+                        <span class="option-desc">Chilling in beautiful homes, meeting locals, soaking vibes.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Step 2 -->
+            <div class="quiz-step" data-step="2">
+                <p class="quiz-question">2. Who are you traveling with?</p>
+                <div class="quiz-options">
+                    <button class="quiz-option" data-answer="solo">
+                        <span class="option-icon">🎒</span>
+                        <span class="option-title">Solo Journey</span>
+                        <span class="option-desc">Looking to meet like-minded travelers.</span>
+                    </button>
+                    <button class="quiz-option" data-answer="group">
+                        <span class="option-icon">👥</span>
+                        <span class="option-title">Squad / Friends</span>
+                        <span class="option-desc">An active private trip for my friend circle.</span>
+                    </button>
+                    <button class="quiz-option" data-answer="couple">
+                        <span class="option-icon">✨</span>
+                        <span class="option-title">With a Partner</span>
+                        <span class="option-desc">Intimate, calm, and scenic trip experiences.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Step 3 -->
+            <div class="quiz-step" data-step="3">
+                <p class="quiz-question">3. What climate makes you feel most alive?</p>
+                <div class="quiz-options">
+                    <button class="quiz-option" data-answer="tropical">
+                        <span class="option-icon">🏝️</span>
+                        <span class="option-title">Warm & Tropical</span>
+                        <span class="option-desc">Lush jungles, surf spots, and warm sea breezes.</span>
+                    </button>
+                    <button class="quiz-option" data-answer="mountain">
+                        <span class="option-icon">🏔️</span>
+                        <span class="option-title">Mountain & Fresh</span>
+                        <span class="option-desc">Crisp air, snow-capped peaks, and high plateaus.</span>
+                    </button>
+                    <button class="quiz-option" data-answer="lake">
+                        <span class="option-icon">🏞️</span>
+                        <span class="option-title">Lakes & Valleys</span>
+                        <span class="option-desc">Calm lakeside views, dense woods, peaceful shores.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Step 4: Results loading/render -->
+            <div class="quiz-step" data-step="4">
+                <div class="quiz-result" id="quiz-result-container">
+                    <div class="loading-spinner"></div>
+                    <p>Curating your perfect itinerary...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dialog-footer">
+            <button class="dialog-nav-btn back-btn" id="quiz-back-btn" disabled>Back</button>
+            <span class="step-counter" id="quiz-step-counter">Step 1 of 3</span>
+        </div>
+    </dialog>
+
+    <!-- Booking Modal Dialog -->
+    <dialog class="booking-dialog" id="booking-dialog">
+        <div class="dialog-header">
+            <h2>Book a Seat</h2>
+            <button class="dialog-close-btn" id="booking-close-btn" aria-label="Close dialog">&times;</button>
+        </div>
+        
+        <div class="booking-content">
+            <form id="trip-booking-form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="booking-dest-select">Select Destination</label>
+                        <select id="booking-dest-select" required>
+                            <!-- Populated in script.js -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="booking-name">Full Name</label>
+                        <input type="text" id="booking-name" placeholder="John Doe" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="booking-email">Email Address</label>
+                        <input type="email" id="booking-email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+                <div class="form-row split">
+                    <div class="form-field">
+                        <label for="booking-seats">Seats</label>
+                        <input type="number" id="booking-seats" min="1" max="10" value="1" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="booking-date">Date Option</label>
+                        <select id="booking-date" required>
+                            <option value="current">Standard Date</option>
+                            <option value="request">Request alternative date</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field checkbox-field">
+                        <input type="checkbox" id="booking-agree" required>
+                        <label for="booking-agree">I agree to the intentional travel guidelines and refund policies.</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-booking-btn" id="submit-booking-btn">Confirm Reservation</button>
+            </form>
+            
+            <div class="booking-success-message" id="booking-success-message" style="display: none;">
+                <div class="success-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Reservation Confirmed!</h3>
+                <p>We've sent a detailed itinerary confirmation to <strong id="success-email">john@example.com</strong>. Your guide will reach out to you within 24 hours.</p>
+                <div class="receipt-box">
+                    <p><strong>Destination:</strong> <span id="receipt-dest">Uluwatu, Bali</span></p>
+                    <p><strong>Seats Reserved:</strong> <span id="receipt-seats">1 seat</span></p>
+                    <p><strong>Reservation ID:</strong> <span id="receipt-id">VT-948194</span></p>
+                </div>
+                <button class="close-success-btn" id="close-success-btn">Done</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Details Dialog Modal -->
+    <dialog class="details-dialog" id="details-dialog">
+        <div class="dialog-header">
+            <h2 id="details-title">Destination</h2>
+            <button class="dialog-close-btn" id="details-close-btn" aria-label="Close dialog">&times;</button>
+        </div>
+        
+        <div class="details-content" id="details-content">
+            <!-- Dynamically populated in script.js -->
+        </div>
+    </dialog>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
