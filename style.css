@@ -1,3 +1,5 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=cabinet-grotesk@300,400,500,700,800,900&display=swap');
+
 /* CSS Reset and Core Setup */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -19,8 +21,9 @@
     --accent-blue-light: #EBF1FC;
     --accent-gold: #E0B034;
     --accent-gold-light: #FCF7E9;
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-h1: 'Cabinet Grotesk', sans-serif;
+    --font-heading: 'Satoshi', sans-serif;
+    --font-body: 'Satoshi', sans-serif;
     --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     --transition-fast: all 0.2s ease;
     --shadow-subtle: 0 4px 20px rgba(0,0,0,0.03);
@@ -61,7 +64,14 @@ body {
 }
 
 /* Typography and General Elements */
-h1, h2, h3, h4 {
+h1 {
+    font-family: var(--font-h1);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--charcoal);
+}
+
+h2, h3, h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
@@ -262,14 +272,14 @@ img {
 }
 
 .hero-title {
-    font-size: clamp(4rem, 10vw, 8rem);
-    font-weight: 800;
+    font-size: clamp(4.8rem, 12vw, 9.6rem);
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #FFFFFF;
     margin-bottom: 10px;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    font-family: var(--font-heading);
+    font-family: var(--font-h1);
 }
 
 .hero-subtitle {
@@ -307,8 +317,9 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 12px 24px;
+    padding: 12px 36px 12px 24px;
     text-align: left;
+    position: relative;
 }
 
 .search-field:not(:last-of-type) {
@@ -324,6 +335,21 @@ img {
     margin-bottom: 6px;
 }
 
+/* Custom Dropdown Arrow for selects in Hero search widget */
+.search-field:has(select)::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 58%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
 .search-field select {
     background: transparent;
     border: none;
@@ -334,6 +360,10 @@ img {
     font-family: var(--font-body);
     width: 100%;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 16px;
 }
 
 .search-field select option {
@@ -775,8 +805,9 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 12px 24px;
+    padding: 12px 36px 12px 24px;
     text-align: left;
+    position: relative;
 }
 
 .filter-group:not(:last-of-type) {
@@ -792,7 +823,37 @@ img {
     margin-bottom: 6px;
 }
 
-.filter-group select,
+/* Custom Dropdown Arrow for selects in places filter bar */
+.filter-group:has(select)::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 58%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath stroke='%237E7268' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.filter-group select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 16px;
+    cursor: pointer;
+}
+
 .filter-group input {
     background: transparent;
     border: none;
@@ -1856,5 +1917,212 @@ dialog[open]::backdrop {
     .footer-container {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+}
+
+/* =========================================================================
+   GALLERY & TESTIMONIALS SECTIONS
+   ========================================================================= */
+.gallery-section {
+    padding: 100px 40px;
+    background-color: var(--bg-primary);
+}
+
+.gallery-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.gallery-header {
+    margin-bottom: 45px;
+}
+
+.gallery-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.gallery-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 260px;
+    gap: 24px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+}
+
+.gallery-item.item-1 { grid-row: span 2; }
+.gallery-item.item-2 { grid-column: span 2; }
+.gallery-item.item-5 { grid-column: span 2; }
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 53, 37, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.gallery-item-overlay span {
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.15rem;
+    border: 2px solid #FFFFFF;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transform: translateY(15px);
+    transition: var(--transition-smooth);
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-heavy);
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-item-overlay span {
+    transform: translateY(0);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 100px 40px;
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--border-color);
+}
+
+.testimonials-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonials-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.testimonials-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--bg-primary);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(74, 53, 37, 0.15);
+    background: #FFFFFF;
+}
+
+.testimonial-rating {
+    color: var(--accent-gold);
+    font-size: 1.25rem;
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-main);
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.testimonial-author .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-light);
+    margin-left: 0;
+}
+
+.author-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 2px;
+}
+
+.author-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Responsive adjustments for gallery grid */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+    .gallery-item.item-2,
+    .gallery-item.item-5 {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+    .gallery-item.item-1 {
+        grid-row: span 1;
     }
 }

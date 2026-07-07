@@ -6,10 +6,8 @@
     <meta name="description" content="Visa Travels - Travel with intention. Discover curated retreats, active adventures, and boutique stays all in one place. Not your boring travel agent.">
     <title>Visa Travels | Go Places with Intention</title>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Typography Fonts (Cabinet Grotesk & Satoshi) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=cabinet-grotesk@300,400,500,700,800,900&display=swap" rel="stylesheet">
     
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -49,11 +47,10 @@
                 <ul>
                     <li><a href="#" class="quiz-trigger" id="nav-link-quiz">Quiz</a></li>
                     <li><a href="#pick-the-place" id="nav-link-retreats">Retreats</a></li>
-                    <li><a href="#pick-the-place" id="nav-link-packages">Packages</a></li>
-                    <li><a href="#" class="booking-trigger" id="nav-link-coaches">Book Seat</a></li>
-                    <li><a href="#our-values" id="nav-link-resources">Our Values</a></li>
+                    <li><a href="#gallery-section" id="nav-link-gallery">Gallery</a></li>
+                    <li><a href="#testimonials-section" id="nav-link-testimonials">Testimonials</a></li>
+                    <li><a href="#our-values" id="nav-link-values">Our Values</a></li>
                     <li><a href="#footer" id="nav-link-contact">Contact us</a></li>
-                    <li><a href="#footer" id="nav-link-about">About us</a></li>
                 </ul>
             </nav>
         </div>
@@ -221,6 +218,48 @@
             </div>
         </section>
 
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery-section">
+            <div class="gallery-container">
+                <div class="gallery-header">
+                    <span class="gallery-tag">• Travel Moments</span>
+                    <h2 class="gallery-title">Captured by Our Squad</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-1" style="background-image: url('images/bangli.png')">
+                        <div class="gallery-item-overlay">
+                            <span>Bangli Walk</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item item-2" style="background-image: url('images/campfire.png')">
+                        <div class="gallery-item-overlay">
+                            <span>Forest Camp</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item item-3" style="background-image: url('images/uluwatu.png')">
+                        <div class="gallery-item-overlay">
+                            <span>Uluwatu Cliffs</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item item-4" style="background-image: url('images/tobalake.png')">
+                        <div class="gallery-item-overlay">
+                            <span>Toba Lakeside</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item item-5" style="background-image: url('images/sumba.png')">
+                        <div class="gallery-item-overlay">
+                            <span>Sumba Meadows</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item item-6" style="background-image: url('images/hero.png')">
+                        <div class="gallery-item-overlay">
+                            <span>Yurt Steppes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- "Pick the Place" Grid & Dynamic Filters -->
         <section class="places-section" id="pick-the-place">
             <div class="places-container">
@@ -289,6 +328,54 @@
                     <h3>No Destinations Match Your Filter</h3>
                     <p>Try resetting the filters or modifying your choices to see open spots.</p>
                     <button class="reset-filter-btn" id="reset-filter-btn">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials-section">
+            <div class="testimonials-container">
+                <div class="testimonials-header">
+                    <span class="testimonials-tag">• Client Stories</span>
+                    <h2 class="testimonials-title">What Our Travelers Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Melali has completely changed the way we travel. Simple, beautiful stays and real connections with local guides. Sumba was pure magic."</p>
+                        <div class="testimonial-author">
+                            <img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Sarah & Dave">
+                            <div class="author-info">
+                                <h4>Sarah & Dave</h4>
+                                <p>Sumba Adventure Seekers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"The yoga retreat in Bangli was exactly what I needed. Restorative valleys, bamboo villas, and the best hosts ever. 10/10 recommendation!"</p>
+                        <div class="testimonial-author">
+                            <img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Marcus Chen">
+                            <div class="author-info">
+                                <h4>Marcus Chen</h4>
+                                <p>Digital Nomad / Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Kazakhstan yurt trip was a pure dream. The mountain views were unbelievable, and standard yurts were cozy and clean. An unforgettable trip."</p>
+                        <div class="testimonial-author">
+                            <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Alina K.">
+                            <div class="author-info">
+                                <h4>Alina K.</h4>
+                                <p>Solo Backpacker</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
